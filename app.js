@@ -81,7 +81,7 @@ const app =Vue.createApp({
             if(this.playerHealth + healValue > 100){
                 this.playerHealth=100;
             }else{
-                 this.playerHealth += healValue;
+                return this.playerHealth += healValue;
             }
             this.addLogMessages('player','heal',healValue);
             this.attackPlayer();
